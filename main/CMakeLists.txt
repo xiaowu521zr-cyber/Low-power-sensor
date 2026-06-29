@@ -1,0 +1,30 @@
+idf_component_register(
+    SRCS
+        "main.c"
+        "tasks/sensor_acq_task.c"
+        "tasks/sensor_transient_task.c"
+        "tasks/command_task.c"
+        "tasks/power_mgmt_task.c"
+        "drivers/mpu6050.c"
+        "drivers/lora_uart.c"
+        "drivers/adc_battery.c"
+        "protocol/gateway_protocol.c"
+        "ulp/ulp_main.S"
+    INCLUDE_DIRS
+        "."
+        "config"
+        "tasks"
+        "drivers"
+        "ulp"
+        "protocol"
+    REQUIRES
+        driver
+        freertos
+        esp_adc
+        nvs_flash
+        ulp
+        soc
+        esp_pm
+        esp_sleep
+        hal
+)
