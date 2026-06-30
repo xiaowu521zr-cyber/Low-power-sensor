@@ -1,1 +1,1 @@
-# Low-power-sensor
+# Low-power-sensor-MPU6050
